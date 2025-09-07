@@ -16,7 +16,7 @@ export default function Sidebar() {
 
   return (
     <aside className="sidebar">
-      <div className="sidebar-header">Team Optix</div>
+      <div className="sidebar-header">Team Optixes</div>
       <nav>
         {menuItems.map((item) => {
           const Icon = item.icon;
