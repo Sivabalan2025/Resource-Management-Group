@@ -1,0 +1,24 @@
+/* Layout wrapper */
+.superadmin-layout {
+  display: flex;
+}
+
+/* Fixed sidebar is 240px wide */
+.superadmin-content {
+  flex: 1;
+  margin-left: 240px;         /* keep clear of sidebar */
+  background: #f5f7fa;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fixed navbar is 70px tall */
+.superadmin-main {
+  flex: 1;
+  padding: 24px 32px;         /* left/right gutter */
+  margin-top: 70px;           /* keep clear of navbar */
+  /* IMPORTANT: never center children here */
+  display: block;             /* not flex to avoid accidental centering */
+}

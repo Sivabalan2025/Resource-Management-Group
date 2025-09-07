@@ -1,0 +1,90 @@
+/* Page wrapper */
+.department-container {
+  padding: 24px 32px;
+  background: #f7f9fc;
+  min-height: 100vh;
+}
+
+.department-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.department-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 22px;
+}
+
+/* ===== Team cards grid: EXACTLY two per row ===== */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* 2 columns always on desktop */
+  gap: 24px;
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: 1fr;     /* stack on small screens */
+  }
+}
+
+/* ===== Team card styling ===== */
+.team-card {
+  --accent: #1e40af;                /* default accent, overridden below */
+  position: relative;
+  background: #fff;
+  border: 1px solid #e8eef5;
+  border-radius: 14px;
+  padding: 28px 24px;
+  min-height: 160px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* subtle accent bar */
+.team-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 6px;
+  border-radius: 14px 14px 0 0;
+  background: var(--accent);
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.08);
+}
+
+.team-card h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.team-card p {
+  margin: 0;
+  font-size: 16px;
+  color: #475569;
+  max-width: 38ch;
+}
+
+/* Per-team accent colors (professional, not loud) */
+.team-card.social  { --accent: #2563eb; } /* blue */
+.team-card.seo     { --accent: #10b981; } /* green */
+.team-card.content { --accent: #f59e0b; } /* amber */
+.team-card.events  { --accent: #ef4444; } /* red */

@@ -1,0 +1,48 @@
+/* Landing page container */
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #007bff, #6610f2);
+  color: #fff;
+  text-align: center;
+}
+
+/* Card */
+.landing-card {
+  background: #fff;
+  color: #333;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 480px;
+  width: 100%;
+}
+
+.landing-card h1 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.landing-card p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Button */
+.landing-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.landing-btn:hover {
+  background-color: #0056b3;
+}

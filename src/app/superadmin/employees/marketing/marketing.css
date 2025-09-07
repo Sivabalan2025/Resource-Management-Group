@@ -1,0 +1,140 @@
+/* Base Styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+  --bg-color: #f9fafb;
+  --text-color: #111827;
+  --card-bg: #ffffff;
+}
+
+body.dark {
+  --bg-color: #111827;
+  --text-color: #f3f4f6;
+  --card-bg: #1f2937;
+}
+
+/* Department Container */
+.department-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.department-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.department-subtitle {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* Team Grid */
+.team-grid.two-rows {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Team Card */
+.team-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.team-card h3 {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.team-card p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Emoji Circle */
+.emoji-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3b82f6; /* default blue */
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.team-card:hover .emoji-circle {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Different team colors */
+.emoji-circle.social {
+  background-color: #3b82f6; /* Blue */
+}
+
+.emoji-circle.seo {
+  background-color: #10b981; /* Green */
+}
+
+.emoji-circle.content {
+  background-color: #f59e0b; /* Amber */
+}
+
+.emoji-circle.event {
+  background-color: #8b5cf6; /* Purple */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-grid.two-rows {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .department-title {
+    font-size: 24px;
+  }
+
+  .department-subtitle {
+    font-size: 14px;
+  }
+
+  .team-card h3 {
+    font-size: 16px;
+  }
+
+  .team-card p {
+    font-size: 12px;
+  }
+
+  .emoji-circle {
+    width: 50px;
+    height: 50px;
+  }
+}

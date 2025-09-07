@@ -1,0 +1,108 @@
+/* Container Styling */
+.seo-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+  background-color: #f9fafb;
+}
+
+.seo-title {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.seo-subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* Grid Layout */
+.seo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Card Styling */
+.seo-card {
+  background-color: #ffffff;
+  color: #111827;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.seo-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Top right section for avatar and ID */
+.top-right-section {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: center;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #3b82f6;
+}
+
+.employee-id {
+  background-color: #10b981;
+  color: white;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-top: 4px;
+}
+
+/* Employee Details */
+.employee-details {
+  margin-top: 100px;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.role {
+  background-color: #3b82f6;
+  color: white;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.employee-details p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.employee-details strong {
+  color: #3b82f6;
+}
+
+.phone {
+  margin-top: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .seo-grid {
+    grid-template-columns: 1fr;
+  }
+}
